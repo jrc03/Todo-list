@@ -1,0 +1,311 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    grid-column: 2 / 3; /* Span the header across the second column */
+}
+
+header input[type="text"]{
+
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #000;
+    background-color: #e6e6e6;
+   
+    width: 40%;
+}
+
+header input[type="text"]:focus {
+    background-color: #fff;
+  outline: 2px solid #4d161b;
+}
+
+
+
+section {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* First column for aside, second for main content */
+    grid-template-rows: auto 1fr ; /* Adjusted to include space for the footer */
+    height: 100vh; /* Full viewport height */
+}
+
+
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #220c10;
+    padding: 20px;
+    grid-column: 1 / 2; /* Ensure aside occupies the first column */
+    grid-row: 1 / 4; /* Span the aside from the first row to the last */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 0 0 20px 0; /* Add some space between lists */
+}
+
+aside ul li {
+    padding: 8px 0px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  
+}
+
+aside ul li:hover {
+
+    background-color: #291d1d;
+    color: #ccc;
+    padding-left: 10px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+aside input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+aside input[type="text"]:focus {
+    background-color: #4d4d4d;
+    outline: 2px solid #c4c4c4;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+aside button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4d161b;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+aside button:hover {
+    background-color: #722024;
+}
+
+aside label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+aside input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+aside h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+aside h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: #291d1d;
+    border-radius: 6px;
+}
+
+aside h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+
+main {
+  
+    grid-column: 2 / 3; /* Ensure main content occupies the second column */
+    padding: 20px;
+    overflow-y: auto; /* Add scrolling if content overflows */
+    grid-row: 2 / 3; /* Main content is in the middle row */
+}
+main {
+    padding: 20px;
+    background-color: #fafafa;  /* Lighter, more modern background */
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Modern font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow for modern effect */
+}
+
+.allProjects {
+    padding: 15px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 12px;  /* Softer, rounded corners */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);  /* Modern shadow effect */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition */
+}
+
+.allProjects:hover {
+    background-color: #f9f9f9;  /* Slight change on hover for interaction feedback */
+    transform: translateY(-3px);  /* Subtle lift effect */
+}
+
+main ul {
+    display: flex;
+    gap: 16px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 15px;
+}
+
+main ul li {
+    border-radius: 4px;
+    padding: 8px 12px;  /* Increased padding for better clickability */
+    border-bottom: 2px solid #333;  /* Darker, more defined border */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;  /* Bolder text for a modern feel */
+}
+
+main ul li:hover {
+    background-color: #e0e0e0;  /* Lighter hover color */
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#addProjectBtn {
+    padding: 12px 24px;  /* Larger padding for better visibility */
+    background-color: #007bff;  /* Modern blue color */
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);  /* Subtle shadow for depth */
+}
+
+#addProjectBtn:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* More pronounced shadow */
+}
+
+/* Dialog things */
+
+/* Dialog Styles */
+dialog {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);  /* Dim the background when the dialog is open */
+}
+
+#projectForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#projectForm input[type="text"] {
+    width: 95%;
+    padding: 8px;
+
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#projectForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#projectForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#closeProjectFormBtn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closeProjectFormBtn:hover {
+    background-color: #c9302c;
+}
+
+
+/* PageContent (PROJECT CONTENT) */
+
+#projectContent{
+
+
+    margin-top: 30px;
+    width: 100%;
+  
+}
+

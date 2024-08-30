@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <section>
+        <header>
+         <input type="text" name="Search" id="searchbar" placeholder="Search">
+        </header>
+        <aside>
+            <h1>To do List</h1>
+            <h2>Tasks</h2>
+            <input type="text" id="taskInput" placeholder="Add a task...">
+            <button id="addTaskBtn">Add</button>
+            <button id="clearTasksBtn">Clear</button>
+            <button id="toggleAllBtn">Toggle All</button>
+            <h2>Completed Tasks</h2>
+            <ul id="completedTasksList">
+            </ul>
+            <h2>Remaining Tasks</h2>
+            <ul id="remainingTasksList">
+            </ul>
+            <h2>Filters</h2>
+            <label for="completedFilter">Show Completed:</label>
+            <input type="checkbox" id="completedFilter" name="completedFilter" checked>
+            <label for="activeFilter">Show Active:</label>
+            <input type="checkbox" id="activeFilter" name="activeFilter">
+            <label for="allFilter">Show All:</label>
+            <input type="checkbox" id="allFilter" name="allFilter">
+           
+        </aside>
+
+        <main>
+         <div class="allProjects">
+            <h1>All Projects</h1>
+            <ul id="allProjectsList">
+                <li>My Example Project</li>
+                <li>Another Project</li>
+                <li>Yet Another Project</li>
+                <li>Even More Projects</li>
+                <input type="button" value="+" id="addProjectBtn">
+            </ul>
+            <dialog>
+                <form id="projectForm">
+                    <label for="projectName">Project Name:</label>
+                    <input type="text" id="projectName" name="projectName">
+                    <input type="submit" value="Create Project">
+                    <button type="button" id="closeProjectFormBtn">Close</button>
+                </form>
+            </dialog>
+         </div>
+         <div class="projectContent">
+            
+         </div>
+
+        </main>
+    
+    </section>
+</body>
+</html>

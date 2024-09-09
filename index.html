@@ -8,16 +8,84 @@
 <body>
     <section>
         <header>
+         <input type="text" name="Search" id="searchbar" placeholder="Search">
         </header>
         <aside>
+            <h1>To do List</h1>
+            <h2>Tasks</h2>
+            <button id="addTaskBtn">Add Task</button>
+            <dialog id="addTaskDialog">
+                <form id="taskForm">
+                    <label for="taskName">Task Name:</label>
+                    <input type="text" id="taskName" name="taskName" required>
+                    <label for="taskDueDate">Due Date:</label>
+                    <input type="date" id="taskDueDate" name="taskDueDate" required>
+                    <label for="taskDescription">Description:</label>
+                    <textarea id="taskDescription" name="taskDescription"></textarea>
+                    
+                    <label for="taskPriority">Priority:</label>
+                    <select id="taskPriority" name="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <input type="button" value="Add Task" id="submitTask">
+
+                    <button type="button" id="closeTaskFormBtn">Close</button>
+                </form>
+            </dialog>
+            <button id="clearTasksBtn">Clear</button>
+            <dialog id="clearDialog">
+<form id="clearForm">
+    <p>Are you sure you want to clear all tasks?</p>
+    <div> 
+        <button type="button" id="confirmClearBtn">Yes</button>
+        <button type="button" id="cancelClearBtn">Cancel</button>
+    </div>
+ 
+</form>
+            </dialog>
+           <!-- <h2>Overview</h2>
+<ul>
+    <li>All</li>
+    <li>In progress</li>
+    <li>Today</li>
+    <li>Weekly</li>
+</ul> -->
 
         </aside>
+
         <main>
+         <div class="allProjects">
+            <h1>All Projects</h1>
+            <div>
+                <ul id="allProjectsList">
+                    <!-- Tasks will be dynamically added here -->
+                    
+                </ul>
+                <input type="button" value="+" id="addProjectBtn">
+            </div>
+            
+            <dialog id="addProjectDialog">
+                <form id="projectForm">
+                    <label for="projectName">Project Name:</label>
+                    <input type="text" id="projectName" name="projectName">
+                    <input type="button" value="Create Project" id="submitProject">
+                    <button type="button" id="closeProjectFormBtn">Close</button>
+                </form>
+            </dialog>
+         </div>
+         <ul id="contextMenu" class="context-menu">
+            <li id="editItem">Edit</li>
+            <li id="deleteItem">Delete</li>
+        </ul>
+        
+         <div class="projectContent">
+            <ul id="taskList"></ul>
+         </div>
 
         </main>
-        <footer>
-            
-        </footer>
+    
     </section>
 </body>
 </html>

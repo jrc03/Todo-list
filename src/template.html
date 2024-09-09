@@ -13,47 +13,75 @@
         <aside>
             <h1>To do List</h1>
             <h2>Tasks</h2>
-            <input type="text" id="taskInput" placeholder="Add a task...">
-            <button id="addTaskBtn">Add</button>
+            <button id="addTaskBtn">Add Task</button>
+            <dialog id="addTaskDialog">
+                <form id="taskForm">
+                    <label for="taskName">Task Name:</label>
+                    <input type="text" id="taskName" name="taskName" required>
+                    <label for="taskDueDate">Due Date:</label>
+                    <input type="date" id="taskDueDate" name="taskDueDate" required>
+                    <label for="taskDescription">Description:</label>
+                    <textarea id="taskDescription" name="taskDescription"></textarea>
+                    
+                    <label for="taskPriority">Priority:</label>
+                    <select id="taskPriority" name="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <input type="button" value="Add Task" id="submitTask">
+
+                    <button type="button" id="closeTaskFormBtn">Close</button>
+                </form>
+            </dialog>
             <button id="clearTasksBtn">Clear</button>
-            <button id="toggleAllBtn">Toggle All</button>
-            <h2>Completed Tasks</h2>
-            <ul id="completedTasksList">
-            </ul>
-            <h2>Remaining Tasks</h2>
-            <ul id="remainingTasksList">
-            </ul>
-            <h2>Filters</h2>
-            <label for="completedFilter">Show Completed:</label>
-            <input type="checkbox" id="completedFilter" name="completedFilter" checked>
-            <label for="activeFilter">Show Active:</label>
-            <input type="checkbox" id="activeFilter" name="activeFilter">
-            <label for="allFilter">Show All:</label>
-            <input type="checkbox" id="allFilter" name="allFilter">
-           
+            <dialog id="clearDialog">
+<form id="clearForm">
+    <p>Are you sure you want to clear all tasks?</p>
+    <div> 
+        <button type="button" id="confirmClearBtn">Yes</button>
+        <button type="button" id="cancelClearBtn">Cancel</button>
+    </div>
+ 
+</form>
+            </dialog>
+           <!-- <h2>Overview</h2>
+<ul>
+    <li>All</li>
+    <li>In progress</li>
+    <li>Today</li>
+    <li>Weekly</li>
+</ul> -->
+
         </aside>
 
         <main>
          <div class="allProjects">
             <h1>All Projects</h1>
-            <ul id="allProjectsList">
-                <li>My Example Project</li>
-                <li>Another Project</li>
-                <li>Yet Another Project</li>
-                <li>Even More Projects</li>
+            <div>
+                <ul id="allProjectsList">
+                    <!-- Tasks will be dynamically added here -->
+                    
+                </ul>
                 <input type="button" value="+" id="addProjectBtn">
-            </ul>
-            <dialog>
+            </div>
+            
+            <dialog id="addProjectDialog">
                 <form id="projectForm">
                     <label for="projectName">Project Name:</label>
                     <input type="text" id="projectName" name="projectName">
-                    <input type="submit" value="Create Project">
+                    <input type="button" value="Create Project" id="submitProject">
                     <button type="button" id="closeProjectFormBtn">Close</button>
                 </form>
             </dialog>
          </div>
+         <ul id="contextMenu" class="context-menu">
+            <li id="editItem">Edit</li>
+            <li id="deleteItem">Delete</li>
+        </ul>
+        
          <div class="projectContent">
-            
+            <ul id="taskList"></ul>
          </div>
 
         </main>

@@ -1,24 +1,50 @@
-// dialogManager.js
-
-// Function to open the dialog
-export function openProjectDialog(dialogElement) {
+export function openDialog(dialogElement) {
     dialogElement.showModal();
 }
 
-// Function to close the dialog
-export function closeProjectDialog(dialogElement) {
+export function closeDialog(dialogElement) {
     dialogElement.close();
 }
 
-// Attach event listeners (can be called from your main JS file)
-export function initializeDialogListeners() {
-    const dialog = document.querySelector('dialog');
-    const openBtn =document.querySelector("#addProjectBtn"); // Assuming you have a button to open the dialog
-    const closeBtn =  document.querySelector("#closeProjectFormBtn");
-
+export function initializeProjectDialogListeners() {
+    const dialog = document.querySelector('#addProjectDialog');
+    const openBtn = document.querySelector("#addProjectBtn");
+    const closeBtn = document.querySelector("#closeProjectFormBtn");
+    const addProjectBtn = document.querySelector("#submitProject");
+    
     if (openBtn) {
-        openBtn.addEventListener('click', () => openProjectDialog(dialog));
+        openBtn.addEventListener('click', () => openDialog(dialog));
     }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => closeDialog(dialog));
+    }
+    if (addProjectBtn) {
+        addProjectBtn.addEventListener('click', () => closeDialog(dialog));
+    }
+}
 
-    closeBtn.addEventListener('click', () => closeProjectDialog(dialog));
+export function initializeTaskDialogListeners() {
+    const dialog = document.querySelector("#addTaskDialog");
+    const openBtn = document.querySelector("#addTaskBtn");
+    const closeBtn = document.querySelector("#closeTaskFormBtn");
+    
+    if (openBtn) {
+        openBtn.addEventListener('click', () => openDialog(dialog));
+    }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => closeDialog(dialog));
+    }
+}
+
+export function initializeClearDialogListeners() {
+    const dialog = document.querySelector("#clearDialog");
+    const openBtn = document.querySelector("#clearTasksBtn");
+    const closeBtn = document.querySelector("#cancelClearBtn");
+    
+    if (openBtn) {
+        openBtn.addEventListener('click', () => openDialog(dialog));
+    }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => closeDialog(dialog));
+    }
 }

@@ -66,7 +66,8 @@ aside ul {
 }
 
 aside ul li {
-    padding: 8px 0px;
+    padding: 8px;
+    margin: 10px;
     width: 100%;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -82,23 +83,8 @@ aside ul li:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-aside input[type="text"] {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    font-size: 14px;
-}
 
-aside input[type="text"]:focus {
-    background-color: #4d4d4d;
-    outline: 2px solid #c4c4c4;
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+
 
 aside button {
     width: 100%;
@@ -156,12 +142,204 @@ aside h3 {
 }
 
 
+
+/* Dialog Styling */
+dialog {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#taskName {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="button"] {
+    padding: 10px;
+    background-color: #4d161b;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #722024;
+}
+
+#closeTaskFormBtn {
+    padding: 8px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeTaskFormBtn:hover {
+    background-color: #bbb;
+}
+
+
+
+/* Dialog Styling */
+dialog {
+    padding: 20px;
+    background-color: #F5EBE0; /* Main dialog background color */
+    border-radius: 10px;
+    border: 2px solid #D6CCC2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+#clearForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#clearForm p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Button Styling */
+#confirmClearBtn, #cancelClearBtn {
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    margin-right: 5px;
+}
+
+#confirmClearBtn {
+    background-color: #4d161b;
+    color: #fff;
+    
+}
+
+#confirmClearBtn:hover {
+    background-color: #722024;
+}
+
+#cancelClearBtn {
+    background-color: #ccc;
+    color: #333;
+}
+
+#cancelClearBtn:hover {
+    background-color: #bbb;
+}
+
+/* Align buttons in a row */
+#clearForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clearForm div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+/* Date Input Styling */
+form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #F5EBE0;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form input[type="date"]:focus {
+    border-color: #4d161b;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Select Element Styling */
+form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #F5EBE0;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form select:focus {
+    border-color: #4d161b;
+    background-color: #fff;
+    outline: none;
+}
+/* Description Textarea Styling */
+form textarea {
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #F5EBE0;
+    color: #333;
+    resize: vertical; /* Allows vertical resizing only */
+    width: 100%; /* Full width of the parent */
+    min-height: 100px; /* Minimum height for the textarea */
+    max-height: 300px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form textarea:focus {
+    border-color: #4d161b;
+    background-color: #fff;
+    outline: none;
+}
+
+
 main {
   
     grid-column: 2 / 3; /* Ensure main content occupies the second column */
     padding: 20px;
     overflow-y: auto; /* Add scrolling if content overflows */
+    overflow-x: hidden;
     grid-row: 2 / 3; /* Main content is in the middle row */
+
 }
 main {
     padding: 20px;
@@ -176,8 +354,8 @@ main {
 }
 
 .allProjects {
-    padding: 15px;
     width: 100%;
+    padding: 15px;
     margin-top: 15px;
     background-color: #fff;
     border-radius: 12px;  /* Softer, rounded corners */
@@ -190,7 +368,16 @@ main {
     transform: translateY(-3px);  /* Subtle lift effect */
 }
 
-main ul {
+.allProjects div{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+gap: 15px;
+
+}
+
+.allProjects ul {
     display: flex;
     gap: 16px;
     list-style-type: none;
@@ -199,7 +386,7 @@ main ul {
     margin-top: 15px;
 }
 
-main ul li {
+.allProjects ul li {
     border-radius: 4px;
     padding: 8px 12px;  /* Increased padding for better clickability */
     border-bottom: 2px solid #333;  /* Darker, more defined border */
@@ -207,7 +394,7 @@ main ul li {
     font-weight: 600;  /* Bolder text for a modern feel */
 }
 
-main ul li:hover {
+.allProjects ul li:hover {
     background-color: #e0e0e0;  /* Lighter hover color */
     cursor: pointer;
     color: #000;
@@ -266,11 +453,11 @@ dialog::backdrop {
     font-size: 14px;
 }
 
-#projectForm input[type="submit"] {
+#projectForm input[type="button"] {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #4d161b;
+    color: white;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -278,16 +465,17 @@ dialog::backdrop {
     transition: background-color 0.3s ease;
 }
 
-#projectForm input[type="submit"]:hover {
-    background-color: #0056b3;
+#projectForm input[type="button"]:hover {
+    background-color: #722024;
 }
 
 #closeProjectFormBtn {
     margin-top: 10px;
     width: 100%;
     padding: 10px;
-    background-color: #d9534f;
-    color: #fff;
+    background-color: #ccc;
+    color: white;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -295,17 +483,132 @@ dialog::backdrop {
 }
 
 #closeProjectFormBtn:hover {
-    background-color: #c9302c;
+    background-color: #bbb;
 }
 
 
-/* PageContent (PROJECT CONTENT) */
 
-#projectContent{
-
-
-    margin-top: 30px;
+/* Project Content Grid */
+.projectContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto; /* Adjust rows to fit content */
+    grid-gap: 20px;
     width: 100%;
-  
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #f9f9f9; /* Light background for a softer look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Task List Container */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox to align tasks horizontally */
+    flex-wrap: wrap; /* Allow tasks to wrap onto multiple lines if necessary */
+    gap: 20px; /* Space between tasks */
+}
+
+/* Individual Task Items */
+#taskList li {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333; /* Darker text for better readability */
+    cursor: pointer;
+ 
+    min-width: 200px; /* Minimum width for each task */
+}
+
+/* Task Name */
+#taskList li strong {
+    font-size: 18px;
+}
+
+/* Task Description */
+.task-description {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666; /* Lighter color for description */
+}
+.task-due-date {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #888; /* Lighter color for due date */
+}
+
+/* Hover effect for tasks */
+#taskList li:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px); /* Subtle hover effect */
+}
+
+/* Task Priority Indicator */
+#taskList li::before {
+    content: attr(data-priority);
+    background-color: #ff7675; /* Default priority color */
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+/* Customizing priority colors based on value */
+#taskList li[data-priority="low"]::before {
+    background-color: #55efc4; /* Green for low priority */
+}
+
+#taskList li[data-priority="medium"]::before {
+    background-color: #ffeaa7; /* Yellow for medium priority */
+}
+
+#taskList li[data-priority="high"]::before {
+    background-color: #ff7675; /* Red for high priority */
+}
+
+
+
+
+
+
+
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    border: 1px solid #4d161b;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    z-index: 1000;
+    list-style-type: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.context-menu li {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.context-menu li:hover {
+    background-color: #E3D5CA;
+}
+
+.selected {
+    background-color: #e0e0e0
+
+}
